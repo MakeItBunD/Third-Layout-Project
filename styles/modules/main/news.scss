@@ -1,0 +1,122 @@
+.news {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 0 90px 0;
+    }
+
+    &__description-container {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        padding: 0 30px 0 0;
+    }
+
+    &__title {
+        font-family: 'Playfair Display';
+        font-size: 32px;
+        line-height: 43px;
+        color: $color_5;
+        margin: 0 0 40px 0;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 27px;
+        color: $color_4;
+        flex: 1 1 auto;
+
+        b {
+            color: #262421;
+        }
+    }
+
+    &__icons-links {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-link {
+        margin: 0 4px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        padding: 10px;
+    }
+
+    &__images-container {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    &__image {
+
+        &_3 {
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .news {
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__description-container {
+            align-items: center;
+            text-align: center;
+            padding: 0;
+        }
+
+        &__subtitle {
+            margin: 0 0 30px 0;
+            flex: none;
+        }
+
+        &__images-container {
+            margin: 0 auto;
+            width: auto;
+        }
+
+        &__image {
+    
+            &_1 {
+                margin: 0 0 0 auto;
+            }
+
+            &_2 {
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .news {
+        &__images-container {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__image {
+            width: 100%;
+            margin: 0 0 30px 0;
+    
+            &_3 {
+                margin: 0;
+            }
+        }
+    }
+}

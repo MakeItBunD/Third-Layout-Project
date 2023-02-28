@@ -1,0 +1,117 @@
+.header {
+    height: 85px;
+    background: $color_9;
+
+    &__menu {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #555248;
+    }
+
+    &__link {
+        margin: 0 2vw 0 0;
+        transition: .3s;
+
+        a {
+            padding: 5px;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:hover {
+            text-shadow: 0 0 10px $color_1;
+        }
+    }
+
+    &__icons-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon-link {
+        padding: 7px;
+        margin: 0 12px 0 0;
+
+        &_with-counter {
+            position: relative;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__likes-counter {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $color_11;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__burger {
+        display: none;
+        width: 30px;
+        height: 29px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    &__burger-lines {
+        width: 30px;
+        height: 3px;
+        background-color: $color_6;
+        position: relative;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -12px;
+            width: 30px;
+            height: 3px;
+            background-color: $color_6;
+        }
+    
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 30px;
+            height: 3px;
+            background-color: $color_6;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__burger {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__logo, &__icons-links, &__list {
+            display: none;
+        }
+    }
+}
+

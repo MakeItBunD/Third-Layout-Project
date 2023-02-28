@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+
+$color_1: #000000;
+$color_2: #ffffff;
+$color_3: #555248;
+$color_4: #444240;
+$color_5: #1B1A17;
+$color_6: #1B1A17D1;
+$color_7: #8B8371;
+$color_8: #F7F5EF;
+$color_9: #FDFDFB;
+$color_10: #FFFFFFBF;
+$color_11: #E6C8B4;
+$color_12: #C4C0B6;
+$color_13: #D4B098;
+$color_14: #262421;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 30px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 64px;
+    color: $color_2;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    text-transform: uppercase;
+}

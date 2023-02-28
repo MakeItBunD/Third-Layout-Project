@@ -1,0 +1,152 @@
+.collection {
+    background-color: $color_9;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__description-container {
+        color: $color_2;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 60px;
+        position: relative;
+        z-index: 1;
+        flex: 1 1 auto;
+    }
+
+    &__title {
+        font-family: 'Playfair Display';
+        color: $color_5;
+        margin: 0 0 16px 0;
+        font-size: 45px;
+        line-height: 60px; 
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: -60px;
+            top: 32px;
+            width: 50px;
+            border: 1px solid #8B8371;
+        }
+    }
+
+    &__subtitle {
+        color: $color_5;
+        font-family: 'Playfair Display';
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 39px 0;
+    }
+
+    &__description {
+        color: $color_1;
+        font-weight: 300;
+        line-height: 21px;
+        color: $color_6;
+        margin: 0 0 64px 0;
+    }
+
+    &__button {
+        color: $color_2;
+        background-color: $color_4;
+        transition: .3s;
+
+        &:hover {
+            background-color: $color_7;
+        }
+    }
+
+    &__image-container {
+        position: relative;
+        width: 580px;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__background-image {
+        position: absolute;
+        top: 0;
+        left: -160px;
+    }
+
+    &__notice {
+        font-family: 'Prata';
+        color: $color_5;
+        font-size: 16px;
+        position: absolute;
+
+        &_price {
+            top: 150px;
+            left: -50px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -60px;
+                top: 5px;
+                width: 50px;
+                border: 1px solid $color_7;
+            }
+        }
+
+        &_diameter {
+            right: 20px;
+            bottom: 150px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -60px;
+                top: 5px;
+                width: 50px;
+                border: 1px solid $color_7;
+            }
+        }
+    }
+
+    &__ruble {
+        width: 10px;
+    }
+}
+
+@media (max-width: 850px) {
+    .collection {
+        background: url('../images/collection-watch.png') 47% 43%/cover no-repeat;
+
+        &__description-container {
+            align-items: center;
+            text-align: center;
+            padding: 200px 0;
+            text-shadow: 0 0 5px $color_1;
+        }
+
+        &__image-container {
+            display: none;
+        }
+
+        &__subtitle {
+            color: $color_2;
+        }
+        
+        &__description {
+            font-size: 18px;
+            color: $color_2;
+        }
+
+        &__title {
+            margin: 0 0 20px 0;
+            color: $color_2;
+            
+            &::before {
+                content: none;
+            }
+        }
+    }
+}
